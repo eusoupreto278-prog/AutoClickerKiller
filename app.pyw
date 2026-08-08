@@ -1,7 +1,7 @@
 # START THE CODE WITH: "cd C:\Users\Naama\OneDrive\Documentos\meus_projetos_python\apps\auto_clicker_killer" > "python app.pyw"
-# Try to add a home work icon
 # Add a button to Start click "Ctrl + F6"
 # To compile 
+# Test
 
 from pyautogui import click
 from keyboard import add_hotkey
