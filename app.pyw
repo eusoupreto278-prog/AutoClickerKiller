@@ -1,13 +1,9 @@
-# START THE CODE WITH: "cd C:\Users\Naama\OneDrive\Documentos\meus_projetos_python\apps\auto_clicker_killer" > "python app.pyw"
-# Add a button to Start click "Ctrl + F6"
-# To compile 
-# Test
+from time import sleep
+import threading
 
 from pyautogui import click
 from keyboard import add_hotkey
 import customtkinter as ctk
-from time import sleep
-import threading
 
 class AppLogic:
     def __init__(self, interface):
@@ -24,7 +20,7 @@ class AppLogic:
 
     def setspeed(self):
         try:
-            self.speed = float(self.interface.entry.get()) 
+            self.speed = float(self.interface.entry.get())
         except:
             pass
 
@@ -47,9 +43,13 @@ class AppInterface:
     def __init__(self):
         self.app = ctk.CTk()
         self.app.title('AutoClickerKiller')
-        self.app.resizable(False, False) # <--- Serve para não permiir maximzar a tela
+        self.app.resizable(False, False)
         self.app.geometry('250x350')
-        self.app.iconbitmap('image.ico') # <--- Return
+
+        try:
+            self.app.iconbitmap('image.ico')
+        except:
+            pass
 
         ctk.set_appearance_mode('dark') 
 
